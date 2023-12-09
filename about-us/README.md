@@ -26,6 +26,6 @@ At Stoppedwumm Studios, our mission is to empower individuals with the knowledge
 
 ## Connect with Us
 
-- **GitHub:** [github.com/yourusername](https://github.com/Stoppedwumm)
+- **GitHub:** [github.com/Stoppedwumm](https://github.com/Stoppedwumm)
 
 Thank you for being a part of our journey in exploring the exciting worlds of Roblox, JavaScript, and Python!
