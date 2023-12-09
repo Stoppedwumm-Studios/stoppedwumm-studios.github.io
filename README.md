@@ -2,11 +2,11 @@
 ### Code a unique world
 Welcome to Stoppedwumm Studios. We are a one man organisation who is good at coding in Lua (Roblox), JavaScript (NodeJS/ExpressJS) and Python (requests)
 
-## Games
-<https://stoppedwumm-studios.github.io/games/>
-
 ## Our projects
 We are currently still building our site, check back later!
+
+## Games
+<https://stoppedwumm-studios.github.io/games/>
 
 ## Some motivational quotes
 ![YKemEvwVer](https://github.com/Stoppedwumm-Studios/stoppedwumm-studios.github.io/assets/129097720/d108477e-9fbb-4af8-91cf-295a09458c52)
