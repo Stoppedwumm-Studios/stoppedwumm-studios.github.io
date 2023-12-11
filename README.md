@@ -6,7 +6,7 @@ Welcome to Stoppedwumm Studios. We are a one man organisation who is good at cod
 <https://stoppedwumm-studios.github.io/about-us/>
 
 ## Our projects
-- [STScenes](https://stoppedwumm-studios.github.io/STScenes/)
+- [STScenes (Recommended)](https://stoppedwumm-studios.github.io/STScenes/)
 - [youtube-dl-gui-dlp-fix](https://github.com/Stoppedwumm-Studios/youtube-dl-gui-dlp-fix)
 - [HTTPScan](https://github.com/Stoppedwumm-Studios/httpscanner)
 - [FakeAIChat](https://github.com/Stoppedwumm-Studios/fakeaichat)
