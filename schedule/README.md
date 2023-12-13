@@ -1,4 +1,4 @@
 # Schedule
 ## Date in European Format (day.month.year)
-- Christmas Game - Planned, waiting for first task to be completed
+- Christmas Game - Started work
 - Star Wars Game - Beginning: 15.12.2023, Planning: 14.12.2023
