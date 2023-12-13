@@ -1,3 +1,4 @@
 # Schedule
+## Date in European Format (day.month.year)
 - Christmas Game - In progress
-- Star Wars Game - Beginning: <t:1702727400:R>
+- Star Wars Game - Beginning: 15.12.2023
