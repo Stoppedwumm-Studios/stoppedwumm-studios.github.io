@@ -16,6 +16,7 @@ Welcome to Stoppedwumm Studios. We are a one man organisation who is good at cod
 
 ## Schedule
 <https://stoppedwumm-studios.github.io/schedule/>
+### Paused due to maintenance and system lockdown
 
 ## Some motivational quotes
 ![YKemEvwVer](https://github.com/Stoppedwumm-Studios/stoppedwumm-studios.github.io/assets/129097720/d108477e-9fbb-4af8-91cf-295a09458c52)
