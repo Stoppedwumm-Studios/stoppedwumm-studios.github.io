@@ -1,4 +1,9 @@
 # Stoppedwumm Studios
+
+
+### Breaking News. I am sick. Suprise Suprise
+
+
 ### Code a unique world
 Welcome to Stoppedwumm Studios. We are a one man organisation who is good at coding in Lua (Roblox), JavaScript (NodeJS/ExpressJS) and Python (requests)
 
