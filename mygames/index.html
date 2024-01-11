@@ -1,44 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roblox Games</title>
-</head>
-<body>
-  <div id="gamesContainer"></div>
+const express = require('express');
+const axios = require('axios');
+const app = express();
+const port = 3000;
 
-  <script>
-    // Replace YOUR_ROBLOX_API_URL with the actual API URL
-    const robloxApiUrl = 'https://games.roblox.com/v2/users/1278786562/games?accessFilter=2&limit=10&sortOrder=Asc';
+// Replace YOUR_ROBLOX_API_URL with the actual API URL
+const robloxApiUrl = 'https://games.roblox.com/v2/users/1278786562/games?accessFilter=2&limit=10&sortOrder=Asc';
 
-    async function fetchGames() {
-      try {
-        const response = await fetch(robloxApiUrl, { mode: 'cors' });
-        const data = await response.json();
-        const games = data.data;
+app.get('/', async (req, res) => {
+  try {
+    const response = await axios.get(robloxApiUrl);
+    const games = response.data.data;
 
-        const gamesContainer = document.getElementById('gamesContainer');
+    const buttonsHTML = games.map(game => {
+      return `
+        <div>
+          <h3>${game.name}</h3>
+          <p>${game.description || 'No description available'}</p>
+          <button onclick="openRobloxPlace(${game.rootPlace.id})">Open ${game.name}</button>
+        </div>
+      `;
+    }).join('');
 
-        games.forEach(game => {
-          const gameDiv = document.createElement('div');
-          gameDiv.innerHTML = `
-            <h3>${game.name}</h3>
-            <p>${game.description || 'No description available'}</p>
-            <button onclick="openRobloxPlace(${game.rootPlace.id})">Open ${game.name}</button>
-          `;
-          gamesContainer.appendChild(gameDiv);
-        });
-      } catch (error) {
-        console.error('Error fetching Roblox games:', error);
-      }
-    }
+    const html = `
+      <html>
+        <head>
+          <title>Roblox Games</title>
+        </head>
+        <body>
+          ${buttonsHTML}
+          <script>
+            function openRobloxPlace(placeId) {
+              window.location.href = 'roblox://placeId=' + placeId;
+            }
+          </script>
+        </body>
+      </html>
+    `;
 
-    function openRobloxPlace(placeId) {
-      window.location.href = `roblox://placeId=${placeId}`;
-    }
+    res.send(html);
+  } catch (error) {
+    console.error('Error fetching Roblox games:', error);
+    res.status(500).send('Internal Server Error');
+  }
+});
 
-    fetchGames();
-  </script>
-</body>
-</html>
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`);
+});
