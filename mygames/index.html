@@ -12,11 +12,10 @@
     // Replace YOUR_ROBLOX_API_URL with the actual API URL
     const robloxApiUrl = 'https://games.roblox.com/v2/users/1278786562/games?accessFilter=2&limit=10&sortOrder=Asc';
 
-    function fetchGames() {
-      const script = document.createElement('script');
-      script.src = `${robloxApiUrl}&callback=processGames`;
-
-      window.processGames = function(data) {
+    async function fetchGames() {
+      try {
+        const response = await fetch(robloxApiUrl, { mode: 'cors' });
+        const data = await response.json();
         const games = data.data;
 
         const gamesContainer = document.getElementById('gamesContainer');
@@ -30,11 +29,9 @@
           `;
           gamesContainer.appendChild(gameDiv);
         });
-
-        document.head.removeChild(script);
-      };
-
-      document.head.appendChild(script);
+      } catch (error) {
+        console.error('Error fetching Roblox games:', error);
+      }
     }
 
     function openRobloxPlace(placeId) {
